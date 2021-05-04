@@ -40,7 +40,7 @@ auto result = Functools::reduce(test,add);
 
 You will get 55. Just abstract accumulator.
 
-4.```slice```
+4.```slice```<br>
 I don't like std::string::substr and there is no common way to get slice of linear structures.<br>
 So i added this function. It returns slice: [begin, end] ⊂ S.
 ```c++
