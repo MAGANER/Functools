@@ -1,5 +1,5 @@
 # Functools
-pretty simple and basic library for C++
+pretty simple and basic functional library for C++
 
 ## What it can do?
 First of all you should know this library is pretty small.<br>
