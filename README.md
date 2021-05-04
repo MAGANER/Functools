@@ -45,7 +45,7 @@ I don't like std::string::substr and there is no common way to get slice of line
 So i added this function. It returns slice: [begin, end] ⊂ S.
 ```c++
 vector<int> test = { 1,2,3,4,5,6,7,8,9,10 };
-auto new_slice = slice(test, 5, 10);
+auto new_slice = Functools::slice(test, 5, 10);
 ```
 
 ### Why did i write this library?
