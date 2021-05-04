@@ -70,4 +70,19 @@ namespace Functools
 		}
 		return result;
 	}
+
+	template<class T>
+	T slice(const T& seq, size_t begin, size_t end)
+	{
+		T new_seq = T();
+		if (end > seq.size()) return new_seq;
+
+		auto beg = seq.begin() + begin;
+		auto _end = seq.begin() + end;
+		for (beg; beg != _end; ++beg)
+		{
+			new_seq.push_back(*beg);
+		}
+		return new_seq;
+	}
 };
