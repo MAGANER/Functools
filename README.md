@@ -11,7 +11,15 @@ i wanted to create pure function to work with basic data structures from c++ STL
 
 ## How to use
 You need to include ```Functools.hpp``` and optionally ```use namespace Functools```.<br>
-
+Also to uses functions for map, you need to define MAP_FUNCTOOLS before including library.<br>
+```c++
+#define MAP_FUNCTOOLS
+#include"Functools.hpp"
+```
+Because to work with ```map``` objects, it does 
+```c++ 
+#include<map>
+```
 
 1.```map```<br>
 ```c++
