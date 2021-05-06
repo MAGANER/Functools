@@ -1,6 +1,9 @@
 #pragma once
 #include<functional>
+
+#ifdef MAP_FUNCTOOLS
 #include<map>
+#endif
 namespace Functools
 {
 	template<class T,class F>
@@ -18,6 +21,8 @@ namespace Functools
 		}
 		return new_seq;
 	}
+
+#ifdef MAP_FUNCTOOLS
 	template<class T1,class T2, class F>
 	std::map<T1, T2> map(const std::map<T1, T2>& hash_table, std::function<F>& lambda)
 	{
@@ -31,7 +36,7 @@ namespace Functools
 		}
 		return new_map;
 	}
-
+#endif
 	template<class T, class F>
 	T filter(const T& seq, const std::function<bool(F)>& predicat)
 	{
@@ -44,6 +49,8 @@ namespace Functools
 		}
 		return new_seq;
 	}
+
+#ifdef MAP_FUNCTOOLS	
 	template<class T1, class T2, class F>
 	std::map<T1, T2> filter(const std::map<T1, T2>& hash_table, std::function<bool(F)>& predicat)
 	{
@@ -56,6 +63,7 @@ namespace Functools
 		}
 		return new_map;
 	}
+#endif
 
 	template<class T, class F, class A>
 	A reduce(const T& seq, const std::function<F(A,A)>& lambda)
