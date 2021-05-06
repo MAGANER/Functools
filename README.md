@@ -3,7 +3,7 @@ pretty simple and basic functional library for C++
 
 ## What it can do?
 First of all you should know this library is pretty small.<br>
-It contains 3 functions only: map, filter and reduce.<br>
+It contains 4 functions only: map, filter, slice and reduce.<br>
 
 As you can guess, it was inspired by python.<br>
 
@@ -40,7 +40,13 @@ auto result = Functools::reduce(test,add);
 
 You will get 55. Just abstract accumulator.
 
-
+4.```slice```<br>
+I don't like std::string::substr and there is no common way to get slice of linear structures.<br>
+So i added this function. It returns slice: [begin, end] ⊂ S.
+```c++
+vector<int> test = { 1,2,3,4,5,6,7,8,9,10 };
+auto new_slice = Functools::slice(test, 5, 10);
+```
 
 ### Why did i write this library?
 Well, mostly because i don't like ```<algorithm>``` from c++ std.
