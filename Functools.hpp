@@ -167,4 +167,15 @@ namespace Functools
 		}
 		return new_seq;
 	}
+
+
+	template<class T>
+	inline function<T> make_lambda(T& fn)
+	{
+		/*
+			write auto check = make_lambda(isspace),
+			not   auto check = [](char ch){ return isspace(ch)};
+		*/
+		return function<T>(fn);
+	}
 };
