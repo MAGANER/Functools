@@ -57,5 +57,12 @@ vector<int> test = { 1,2,3,4,5,6,7,8,9,10 };
 auto new_slice = Functools::slice(test, 5, 10);
 ```
 
+I added new simple function ```make_lambda```<br>
+It takes reference to function and returns std::function object.<br>
+```c++
+function<bool(int)> check = make_lambda(isspace);
+```
+
+
 ### Why did i write this library?
 Well, mostly because i don't like ```<algorithm>``` from c++ std.
